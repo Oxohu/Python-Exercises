@@ -8,3 +8,6 @@ print(16//2)
 fav_number = 10
 message = f"my favourite number is {fav_number}"
 print(message)
+
+name = "nafisat"
+print(f" Hello, it is nice to meet you {name.title()}. \n go ahead and have a seat")
