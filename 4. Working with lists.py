@@ -13,15 +13,13 @@ def Favourite_pizza(pizza: list[str]) -> str:
 this is a function that loops through a list of pets and if there is a dog in the list,
 It prints the sentence: a dog would make a great pet
 '''
-def pets(animals : list[str]) -> str:
+def pets(animals : list[str]) -> None:
     for animal in animals:
         if animal == "dog":
             print("A dog would make a good pet")
-            break
+            return
         else:
             print(f"there are no dogs, we only have a {animal} \n Try the next shop")
-    return
-
 
 #creating the list to be passed as arguement to the function
 pizza_types =['pepperoni', 'Olive', 'chicken']
