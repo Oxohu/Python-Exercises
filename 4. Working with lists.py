@@ -1,3 +1,4 @@
+# TASK 1: Stings
 """
 this is a function that prints a sentence,
 using the name of a pizza from a list of my favourite pizzas, the pizza_list
@@ -34,3 +35,12 @@ print("I would like to order one of all")
 animals = ['cat', 'dog', 'snake', 'spider']
 #calling the function "pets"
 pets(animals)
+
+
+#TASK 2 : Integers
+
+def counting(numbers:int) -> int:
+    for i in range (numbers):
+        print(i)
+    return
+counting(20)
