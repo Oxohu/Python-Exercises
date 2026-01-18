@@ -6,8 +6,8 @@ welcome_message = f" hi {names[2]}, it's nice to meet you"
 print(welcome_message)
 
 cars = ["honda", "Toyota", "Ferarri", "BMW"]
-print(f" I would love to own a {cars[3].lower()}")
-
+print(f" I would love to own a {cars[3].()}")
+lower
 guest_list = ['aisha', 'Ruqayyah', 'Khadijah', 'Abdullah']
 print(guest_list)
 guest_list.pop()
