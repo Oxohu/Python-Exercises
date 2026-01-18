@@ -28,6 +28,12 @@ pizza_types =['pepperoni', 'Olive', 'chicken']
 Favourite_pizza(pizza_types)
 print("I would like to order one of all")
 
+'''copying the list of pizza types into a friend's pizza 
+and appending a new pizza type to the list
+'''
+friends_pizza = pizza_types[:]
+friends_pizza.append('nutmeg')
+print(friends_pizza)
 
 #creating a list to be passed to the function "pets"
 animals = ['cat', 'dog', 'snake', 'spider']
@@ -56,3 +62,19 @@ def sum_of_million(value : int) -> int:
     return summation
 
 sum_of_million(1000001)
+
+"""
+the function below makes a list cubes within the range passes
+"""
+def cubes(number: int) -> list[int]:
+    values = [i**3 for i in range (number)]
+    print (values)
+    print (values[:3])
+    print (values[2:6])
+    print(values[-3:])
+    return 
+
+cubes(10)
+
+
+
