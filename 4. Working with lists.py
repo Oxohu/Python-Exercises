@@ -39,8 +39,22 @@ pets(animals)
 
 #TASK 2 : Integers
 
+'''
+this function uses a for loop to print numbers within the range of the argument passed
+'''
 def counting(numbers:int) -> int:
     for i in range (numbers):
         print(i)
     return
+
 counting(20)
+
+"""
+this function sums all numbers within the given range
+"""
+def sum_of_million(value : int) -> int:
+    summation = sum(i for i in range(value))
+    print (summation)
+    return summation
+
+sum_of_million(1000001)
