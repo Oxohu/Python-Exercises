@@ -75,6 +75,13 @@ def cubes(number: int) -> list[int]:
     return 
 
 cubes(10)
+"""
+creating a tuple of buffet food and testing the mutability of the tuple
+"""
+buffet = ('rice', 'noodles', 'yam', 'fruits', 'mac')
+print(buffet)
 
+#a tuple cannot be modified but a new value can be assigned to a tuple
 
-
+buffet= ("pasta")
+print (buffet)
