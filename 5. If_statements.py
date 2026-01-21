@@ -11,6 +11,7 @@ def check_score(alien_colour: str):
     this function uses an if statement to verify whether or not the
     gamer guessed the correct colour of the alien that was shot down
     :param alien_colour: is a variable that stores the gamer's choice of colour
+    :type alien_colour: str
     """
     if alien_colour == "green":
         print("you just earned 5 points")
@@ -29,7 +30,7 @@ check_score(alien_colour)
 def stage_of_life(age: int):
     """
     Docstring for stage_of_life
-
+    Determines the life stage of a person based on age.
     :param age: input to be collected from user
     :type age: int
     """
@@ -54,8 +55,10 @@ stage_of_life(age)
 def affinity_fruits(fruit: str):
     """
     Docstring for affinity_fruits
-    
-    :param fruit: Description
+    this function decides whethe or not the fruit the user is asking for is
+    one of the fruits the likes
+    :param fruit: input collected from user based on what
+    fruit they want to purchase
     :type fruit: str
     """
     fruit_list = ["oranges", "Bananas", "Apples"]
@@ -64,23 +67,26 @@ def affinity_fruits(fruit: str):
     else:
         print(f"{fruit} is not part of the fruits you like")
 
+
 fruit = input("what fruits do you want?")
 affinity_fruits(fruit)
+
 
 def user_greeting(usernames: str):
     """
     Docstring for user_greeting
-    
+
     :param usernames: Description
     :type usernames: str
     """
-    usernames = ["Admin", "habeeb", "nafist", "fatimah","aisha"]
+    usernames = ["Admin", "habeeb", "nafist", "fatimah", "aisha"]
     for name in usernames:
         if name == "Admin":
             print("Hello admin, would you like to see a status report?")
             break
         else:
             print("welcome back user")
+
 
 name = input("enter your user name: ")
 user_greeting(name)
