@@ -31,7 +31,7 @@ def stage_of_life(age: int):
     """
     Docstring for stage_of_life
     Determines the life stage of a person based on age.
-    :param age: input to be collected from user
+    :param age: input to be collected from user on how old they are
     :type age: int
     """
     if age < 2:
@@ -75,8 +75,9 @@ affinity_fruits(fruit)
 def user_greeting(usernames: str):
     """
     Docstring for user_greeting
-
-    :param usernames: Description
+    the username input by the user is used to determine 
+    what type of greeting message should be displayed 
+    :param usernames: user name the user inputs
     :type usernames: str
     """
     usernames = ["Admin", "habeeb", "nafist", "fatimah", "aisha"]
@@ -90,3 +91,5 @@ def user_greeting(usernames: str):
 
 name = input("enter your user name: ")
 user_greeting(name)
+
+
