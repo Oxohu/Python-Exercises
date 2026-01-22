@@ -85,11 +85,22 @@ def user_greeting(usernames: str):
         if name == "Admin":
             print("Hello admin, would you like to see a status report?")
             break
-        else:
+        elif name != "Admin":
             print("welcome back user")
-
+        else:
+            print("you need to register as a user")
 
 name = input("enter your user name: ")
 user_greeting(name)
 
-
+def username_status(your_username: str) -> str:
+    old_users = ["Admin", "habeeb", "nafisat", "fatimah", "aisha"]
+    if name in old_users:
+        print("user name already taken")
+    else: 
+        old_users.append(name)
+        print(old_users)
+    
+name = input("enter username: ")
+username_status(name)
+    
