@@ -75,8 +75,8 @@ affinity_fruits(fruit)
 def user_greeting(usernames: str):
     """
     Docstring for user_greeting
-    the username input by the user is used to determine 
-    what type of greeting message should be displayed 
+    the username input by the user is used to determine
+    what type of greeting message should be displayed
     :param usernames: user name the user inputs
     :type usernames: str
     """
@@ -90,17 +90,27 @@ def user_greeting(usernames: str):
         else:
             print("you need to register as a user")
 
+
 name = input("enter your user name: ")
 user_greeting(name)
 
-def username_status(your_username: str) -> str:
+
+def username_status(your_username: str):
+    """
+    Docstring for username_status
+    this function checks if the username already exists in the list
+    if it does, prints a message informing the user
+    if it doesn't, the username is appended to the list
+    :param your_username: input to be collected from the user while logging in
+    :type your_username: str
+    """
     old_users = ["Admin", "habeeb", "nafisat", "fatimah", "aisha"]
     if name in old_users:
         print("user name already taken")
-    else: 
+    else:
         old_users.append(name)
         print(old_users)
-    
+
+
 name = input("enter username: ")
 username_status(name)
-    
