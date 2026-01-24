@@ -1,116 +1,101 @@
 car = "subaru"
 print("Is car == 'subaru'? I predict True.")
 print(car == "subaru")
+
 print("\nIs car == 'audi'? I predict False.")
 print(car == "audi")
 
 
-def check_score(alien_colour: str):
+def check_score(alien_colour: str) -> str:
     """
-    Docstring for stage_of_life
-    this function uses an if statement to verify whether or not the
-    gamer guessed the correct colour of the alien that was shot down
-    :param alien_colour: is a variable that stores the gamer's choice of colour
-    :type alien_colour: str
+    This function uses an if statement to verify whether or not the
+    gamer guessed the correct colour of the alien that was shot down.
     """
     if alien_colour == "green":
-        print("you just earned 5 points")
+        return "You just earned 5 points"
     elif alien_colour == "yellow":
-        print("you just earned 10 points")
+        return "You just earned 10 points"
     elif alien_colour == "red":
-        print("you just earned 15 points")
+        return "You just earned 15 points"
     else:
-        print("you got the alien colours wrong")
+        return "You got the alien colours wrong"
 
 
 alien_colour = "red"
-check_score(alien_colour)
+result = check_score(alien_colour)
+print(result)
 
 
-def stage_of_life(age: int):
+def stage_of_life(age: int) -> str:
     """
-    Docstring for stage_of_life
     Determines the life stage of a person based on age.
-    :param age: input to be collected from user on how old they are
-    :type age: int
     """
     if age < 2:
-        print("you are a child")
-    elif age >= 2 and age < 4:
-        print("you are a toddler")
-    elif age >= 4 and age < 13:
-        print("you are a kid")
-    elif age >= 13 and age < 20:
-        print("you are a teenager")
-    elif age >= 20 and age < 65:
-        print("you are an adult")
+        return "You are a child"
+    elif age < 4:
+        return "You are a toddler"
+    elif age < 13:
+        return "You are a kid"
+    elif age < 20:
+        return "You are a teenager"
+    elif age < 65:
+        return "You are an adult"
     else:
-        print("you are an elder")
+        return "You are an elder"
 
 
-age = int(input("how old are you? "))
-stage_of_life(age)
+age = int(input("How old are you? "))
+print(stage_of_life(age))
 
 
-def affinity_fruits(fruit: str):
+def affinity_fruits(fruit: str) -> str:
     """
-    Docstring for affinity_fruits
-    this function decides whethe or not the fruit the user is asking for is
-    one of the fruits the likes
-    :param fruit: input collected from user based on what
-    fruit they want to purchase
-    :type fruit: str
+    This function checks whether the fruit requested
+    is part of the liked fruits list.
     """
-    fruit_list = ["oranges", "Bananas", "Apples"]
+    fruit_list = ["oranges", "bananas", "apples"]
+    fruit = fruit.lower()
+
     if fruit in fruit_list:
-        print(f"you really like {fruit}")
+        return f"You really like {fruit}"
     else:
-        print(f"{fruit} is not part of the fruits you like")
+        return f"{fruit} is not part of the fruits you like"
 
 
-fruit = input("what fruits do you want?")
-affinity_fruits(fruit)
+fruit = input("What fruit do you want? ")
+print(affinity_fruits(fruit))
 
 
-def user_greeting(usernames: str):
+def user_greeting(username: str) -> str:
     """
-    Docstring for user_greeting
-    the username input by the user is used to determine
-    what type of greeting message should be displayed
-    :param usernames: user name the user inputs
-    :type usernames: str
+    Determines the greeting message based on username.
     """
     usernames = ["Admin", "habeeb", "nafist", "fatimah", "aisha"]
-    for name in usernames:
-        if name == "Admin":
-            print("Hello admin, would you like to see a status report?")
-            break
-        elif name != "Admin":
-            print("welcome back user")
-        else:
-            print("you need to register as a user")
+
+    if username == "Admin":
+        return "Hello admin, would you like to see a status report?"
+    elif username in usernames:
+        return "Welcome back user"
+    else:
+        return "You need to register as a user"
 
 
-name = input("enter your user name: ")
-user_greeting(name)
+name = input("Enter your username: ")
+print(user_greeting(name))
 
 
-def username_status(your_username: str):
+def username_status(your_username: str) -> list | str:
     """
-    Docstring for username_status
-    this function checks if the username already exists in the list
-    if it does, prints a message informing the user
-    if it doesn't, the username is appended to the list
-    :param your_username: input to be collected from the user while logging in
-    :type your_username: str
+    Checks if the username already exists.
     """
     old_users = ["Admin", "habeeb", "nafisat", "fatimah", "aisha"]
-    if name in old_users:
-        print("user name already taken")
+
+    if your_username in old_users:
+        return "Username already taken"
     else:
-        old_users.append(name)
-        print(old_users)
+        old_users.append(your_username)
+        return old_users
 
 
-name = input("enter username: ")
-username_status(name)
+name = input("Enter username: ")
+print(username_status(name))
