@@ -5,7 +5,7 @@ def people_data() -> list:
     return [
         {"first_name": "Aisha", "last_name": "Sadiq", "age": 20, "city": "Minna"},
         {"first_name": "Habeeb", "last_name": "Lawal", "age": 22, "city": "Ilorin"},
-        {"first_name": "Fatimah", "last_name": "Yusuf", "age": 19, "city": "Zaria"}
+        {"first_name": "Fatimah", "last_name": "Yusuf", "age": 19, "city": "Zaria"},
     ]
 
 
@@ -22,12 +22,9 @@ def favourite_numbers() -> dict:
     returns a dictionary that stores peoples favourite number
     :rtype: dict
     """
-    return {
-        "Nafisat" : 10,
-        "fatimah" : 15,
-        "ibrahim": 20,
-        "fatima" : 18
-        }
+    return {"Nafisat": 10, "fatimah": 15, "ibrahim": 20, "fatima": 18}
+
+
 fav_number = favourite_numbers()
 
 for key, value in fav_number.items():
@@ -44,9 +41,9 @@ def programming_words() -> dict:
     return {
         "loop": " is used to repeat a block of code multiple times\n",
         "truthy": " is any value that evaluates to True in a condition\n",
-        "boolean":"is a data type with only two values: True or False\n",
-
+        "boolean": "is a data type with only two values: True or False\n",
     }
+
 
 programming_concepts = programming_words()
 for key, value in programming_concepts.items():
@@ -57,11 +54,7 @@ def rivers_and_countries() -> dict:
     """
     Returns rivers and the countries they run through.
     """
-    return {
-        "Nile": "Egypt",
-        "Niger": "Nigeria",
-        "Amazon": "Brazil"
-    }
+    return {"Nile": "Egypt", "Niger": "Nigeria", "Amazon": "Brazil"}
 
 
 rivers = rivers_and_countries()
@@ -84,12 +77,7 @@ def favorite_languages() -> dict:
     """
     Returns people and their favorite programming languages.
     """
-    return {
-        "jen": "python",
-        "sarah": "c",
-        "edward": "rust",
-        "phil": "python"
-    }
+    return {"jen": "python", "sarah": "c", "edward": "rust", "phil": "python"}
 
 
 def poll_candidates() -> list:
@@ -108,6 +96,7 @@ for person in candidates:
     else:
         print(f"{person.title()}, please take the favorite languages poll.")
 
+
 def people_data() -> list:
     """
     Returns a list of dictionaries containing information about people.
@@ -115,7 +104,7 @@ def people_data() -> list:
     return [
         {"first_name": "Aisha", "last_name": "Sadiq", "age": 20, "city": "Minna"},
         {"first_name": "Habeeb", "last_name": "Lawal", "age": 22, "city": "Ilorin"},
-        {"first_name": "Fatimah", "last_name": "Yusuf", "age": 19, "city": "Zaria"}
+        {"first_name": "Fatimah", "last_name": "Yusuf", "age": 19, "city": "Zaria"},
     ]
 
 
@@ -134,7 +123,7 @@ def pets_data() -> list:
     return [
         {"animal": "dog", "owner": "Amina"},
         {"animal": "cat", "owner": "Sadiq"},
-        {"animal": "parrot", "owner": "Habeeb"}
+        {"animal": "parrot", "owner": "Habeeb"},
     ]
 
 
@@ -153,7 +142,7 @@ def favorite_places() -> dict:
     return {
         "Aisha": ["Abuja", "Ilorin"],
         "Habeeb": ["Lagos", "Ibadan", "Ogbomosho"],
-        "Fatimah": ["Minna"]
+        "Fatimah": ["Minna"],
     }
 
 
@@ -170,12 +159,7 @@ def favorite_numbers() -> dict:
     """
     Returns people and lists of their favorite numbers.
     """
-    return {
-        "Aisha": [3, 7],
-        "Habeeb": [5, 9, 11],
-        "Fatimah": [2],
-        "Sadiq": [4, 8]
-    }
+    return {"Aisha": [3, 7], "Habeeb": [5, 9, 11], "Fatimah": [2], "Sadiq": [4, 8]}
 
 
 numbers = favorite_numbers()
@@ -195,18 +179,18 @@ def cities_info() -> dict:
         "Minna": {
             "country": "Nigeria",
             "population": "Approx. 500,000",
-            "fact": "Home to FUT Minna"
+            "fact": "Home to FUT Minna",
         },
         "Lagos": {
             "country": "Nigeria",
             "population": "Over 20 million",
-            "fact": "Nigeria’s commercial hub"
+            "fact": "Nigeria’s commercial hub",
         },
         "Cairo": {
             "country": "Egypt",
             "population": "Over 9 million",
-            "fact": "Located along the Nile River"
-        }
+            "fact": "Located along the Nile River",
+        },
     }
 
 
@@ -228,7 +212,7 @@ def extended_cities_info() -> dict:
             "country": "Nigeria",
             "population": "Approx. 3 million",
             "fact": "Capital city of Nigeria",
-            "known_for": "Planned city and government institutions"
+            "known_for": "Planned city and government institutions",
         }
     }
 
@@ -239,4 +223,3 @@ for city, details in extended_cities.items():
     print(f"City: {city}")
     for key, value in details.items():
         print(f"- {key.title()}: {value}")
-
