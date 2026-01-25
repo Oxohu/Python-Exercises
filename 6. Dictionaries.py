@@ -218,3 +218,25 @@ for city, details in cities.items():
         print(f"  {key}: {value}")
     print()
 
+
+def extended_cities_info() -> dict:
+    """
+    Extended city data with additional details.
+    """
+    return {
+        "Abuja": {
+            "country": "Nigeria",
+            "population": "Approx. 3 million",
+            "fact": "Capital city of Nigeria",
+            "known_for": "Planned city and government institutions"
+        }
+    }
+
+
+extended_cities = extended_cities_info()
+
+for city, details in extended_cities.items():
+    print(f"City: {city}")
+    for key, value in details.items():
+        print(f"- {key.title()}: {value}")
+
