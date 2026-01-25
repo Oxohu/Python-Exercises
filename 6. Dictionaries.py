@@ -1,6 +1,8 @@
 def people_data() -> list:
     """
     Returns a list of dictionaries containing information about people.
+
+    :rtype: list
     """
     return [
         {"first_name": "Aisha", "last_name": "Sadiq", "age": 20, "city": "Minna"},
@@ -20,6 +22,7 @@ for person in people:
 def favourite_numbers() -> dict:
     """
     returns a dictionary that stores peoples favourite number
+
     :rtype: dict
     """
     return {"Nafisat": 10, "fatimah": 15, "ibrahim": 20, "fatima": 18}
@@ -54,7 +57,10 @@ def rivers_and_countries() -> dict:
     """
     Returns rivers and the countries they run through.
     """
-    return {"Nile": "Egypt", "Niger": "Nigeria", "Amazon": "Brazil"}
+    return {"Nile": "Egypt", 
+            "Niger": "Nigeria", 
+            "Amazon": "Brazil"
+            }
 
 
 rivers = rivers_and_countries()
@@ -76,6 +82,8 @@ for country in rivers.values():
 def favorite_languages() -> dict:
     """
     Returns people and their favorite programming languages.
+
+    :rtype: dict
     """
     return {"jen": "python", "sarah": "c", "edward": "rust", "phil": "python"}
 
@@ -83,6 +91,8 @@ def favorite_languages() -> dict:
 def poll_candidates() -> list:
     """
     Returns a list of people who should take the poll.
+
+    :rtype: list
     """
     return ["jen", "sarah", "mike", "phil", "amina", "edward"]
 
@@ -100,6 +110,8 @@ for person in candidates:
 def people_data() -> list:
     """
     Returns a list of dictionaries containing information about people.
+
+    :rtype: list
     """
     return [
         {"first_name": "Aisha", "last_name": "Sadiq", "age": 20, "city": "Minna"},
@@ -119,6 +131,8 @@ for person in people:
 def pets_data() -> list:
     """
     Returns a list of dictionaries representing pets.
+
+    :rtype:list
     """
     return [
         {"animal": "dog", "owner": "Amina"},
@@ -138,6 +152,8 @@ for pet in pets:
 def favorite_places() -> dict:
     """
     Returns people and their favorite places.
+
+    :rtype: dict
     """
     return {
         "Aisha": ["Abuja", "Ilorin"],
@@ -158,6 +174,8 @@ for name, locations in places.items():
 def favorite_numbers() -> dict:
     """
     Returns people and lists of their favorite numbers.
+
+    :rtpye: dict
     """
     return {"Aisha": [3, 7], "Habeeb": [5, 9, 11], "Fatimah": [2], "Sadiq": [4, 8]}
 
@@ -174,6 +192,8 @@ for name, nums in numbers.items():
 def cities_info() -> dict:
     """
     Returns information about cities.
+    
+    :rtype: dict
     """
     return {
         "Minna": {
@@ -206,6 +226,8 @@ for city, details in cities.items():
 def extended_cities_info() -> dict:
     """
     Extended city data with additional details.
+
+    :rtype: dict
     """
     return {
         "Abuja": {
