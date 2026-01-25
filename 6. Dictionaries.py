@@ -198,18 +198,18 @@ def cities_info() -> dict:
     return {
         "Minna": {
             "country": "Nigeria",
-            "population": "Approx. 500,000",
-            "fact": "Home to FUT Minna",
+            "population": "Approx. 5 million",
+            "fact": "Home to FUT Minna University",
         },
         "Lagos": {
             "country": "Nigeria",
-            "population": "Over 20 million",
+            "population": "Over 10 million",
             "fact": "Nigeria’s commercial hub",
         },
         "Cairo": {
             "country": "Egypt",
             "population": "Over 9 million",
-            "fact": "Located along the Nile River",
+            "fact": "Nile River",
         },
     }
 
