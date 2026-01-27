@@ -50,3 +50,54 @@ def multiple_of_ten() -> bool:
 
 print(multiple_of_ten())
 
+
+while True:
+    topping = input("Enter a pizza topping (or 'quit' to stop): ")
+
+    if topping.lower() == 'quit':
+        break
+    else:
+        print(f"I'll add {topping} to your pizza.")
+
+
+while True:
+    age = input("Enter your age (or 'quit' to stop): ")
+
+    if age.lower() == 'quit':
+        break
+
+    age = int(age)
+
+    if age < 3:
+        print("Your ticket is free.")
+    elif age <= 12:
+        print("Your ticket costs $10.")
+    else:
+        print("Your ticket costs $15.")
+
+
+topping = ""
+while topping != 'quit':
+    topping = input("Enter a topping (or 'quit' to stop): ")
+
+    if topping != 'quit':
+        print(f"I'll add {topping} to your pizza.")
+
+
+topping = ""
+while topping != 'quit':
+    topping = input("Enter a topping (or 'quit' to stop): ")
+
+    if topping != 'quit':
+        print(f"I'll add {topping} to your pizza.")
+
+while True:
+    topping = input("Enter a topping (or 'quit' to stop): ")
+
+    if topping == 'quit':
+        break
+    print(f"I'll add {topping} to your pizza.")
+
+
+while True:
+    print("This loop will run forever.")
