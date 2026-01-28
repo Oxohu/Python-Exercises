@@ -76,29 +76,86 @@ while True:
         print("Your ticket costs $15.")
 
 
+def add_pizza_toppings():
+    topping = ""
+    while topping != 'quit':
+        topping = input("Enter a topping (or 'quit' to stop): ")
 
-topping = ""
-while topping != 'quit':
-    topping = input("Enter a topping (or 'quit' to stop): ")
+        if topping != 'quit':
+            print(f"I'll add {topping} to your pizza.")
 
-    if topping != 'quit':
+
+def add_pizza_toppings_with_break():
+    while True:
+        topping = input("Enter a topping (or 'quit' to stop): ")
+
+        if topping == 'quit':
+            break
         print(f"I'll add {topping} to your pizza.")
 
 
-topping = ""
-while topping != 'quit':
-    topping = input("Enter a topping (or 'quit' to stop): ")
-
-    if topping != 'quit':
-        print(f"I'll add {topping} to your pizza.")
-
-while True:
-    topping = input("Enter a topping (or 'quit' to stop): ")
-
-    if topping == 'quit':
-        break
-    print(f"I'll add {topping} to your pizza.")
+def infinite_loop():
+    while True:
+        print("This loop will run forever.")
 
 
-while True:
-    print("This loop will run forever.")
+
+def make_sandwiches(sandwich_orders):
+    finished_sandwiches = []
+
+    while sandwich_orders:
+        sandwich = sandwich_orders.pop(0)
+        print(f"I made your {sandwich} sandwich.")
+        finished_sandwiches.append(sandwich)
+
+    print("\nSandwiches made:")
+    for sandwich in finished_sandwiches:
+        print(sandwich)
+
+
+def make_sandwiches_no_pastrami(sandwich_orders):
+    finished_sandwiches = []
+
+    print("\nSorry, the deli has run out of pastrami.")
+
+    while 'pastrami' in sandwich_orders:
+        sandwich_orders.remove('pastrami')
+
+    while sandwich_orders:
+        sandwich = sandwich_orders.pop(0)
+        print(f"I made your {sandwich} sandwich.")
+        finished_sandwiches.append(sandwich)
+
+    print("\nSandwiches made:")
+    for sandwich in finished_sandwiches:
+        print(sandwich)
+
+
+def dream_vacation_poll():
+    dream_vacations = {}
+
+    while True:
+        name = input("\nWhat is your name? ")
+        place = input("If you could visit one place in the world, where would you go? ")
+
+        dream_vacations[name] = place
+
+        another = input("Would you like to let another person respond? (yes/no): ")
+        if another.lower() == 'no':
+            break
+
+    print("\nPoll results:")
+    for name, place in dream_vacations.items():
+        print(f"{name} would like to visit {place}.")
+
+
+sandwich_orders_1 = ['tuna', 'chicken', 'pastrami', 'egg', 'beef']
+make_sandwiches(sandwich_orders_1)
+
+sandwich_orders_2 = [
+    'tuna', 'pastrami', 'chicken',
+    'pastrami', 'egg', 'pastrami', 'beef'
+]
+make_sandwiches_no_pastrami(sandwich_orders_2)
+
+dream_vacation_poll()
