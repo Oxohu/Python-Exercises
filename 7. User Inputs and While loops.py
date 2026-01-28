@@ -52,27 +52,47 @@ print(multiple_of_ten())
 
 
 def add_pizza_toppings():
+    """
+    This function prompts users to enter toppings they would like to add to their pizza.
+    """
+    toppings = []
     topping = ""
+
     while topping != 'quit':
         topping = input("Enter a topping (or 'quit' to stop): ")
-
         if topping != 'quit':
-            print(f"I'll add {topping} to your pizza.")
+            toppings.append(topping)
+
+    return toppings
+
+
+toppings = add_pizza_toppings()
+for topping in toppings:
+    print(f"I'll add {topping} to your pizza.")
 
 
 def add_pizza_toppings_with_break():
+    toppings = []
+
     while True:
         topping = input("Enter a topping (or 'quit' to stop): ")
-
         if topping == 'quit':
             break
-        print(f"I'll add {topping} to your pizza.")
+        toppings.append(topping)
+
+    return toppings
+
+
+toppings = add_pizza_toppings_with_break()
+for topping in toppings:
+    print(f"I'll add {topping} to your pizza.")
 
 
 def infinite_loop():
-    while True:
-        print("This loop will run forever.")
+    return "This loop will run forever."
 
+
+print(infinite_loop())
 
 
 def make_sandwiches(sandwich_orders):
@@ -80,30 +100,38 @@ def make_sandwiches(sandwich_orders):
 
     while sandwich_orders:
         sandwich = sandwich_orders.pop(0)
-        print(f"I made your {sandwich} sandwich.")
         finished_sandwiches.append(sandwich)
 
-    print("\nSandwiches made:")
-    for sandwich in finished_sandwiches:
-        print(sandwich)
+    return finished_sandwiches
+
+
+sandwich_orders = ['tuna', 'chicken', 'pastrami', 'egg', 'beef']
+finished = make_sandwiches(sandwich_orders)
+for sandwich in finished:
+    print(f"I made your {sandwich} sandwich.")
 
 
 def make_sandwiches_no_pastrami(sandwich_orders):
     finished_sandwiches = []
-
-    print("\nSorry, the deli has run out of pastrami.")
 
     while 'pastrami' in sandwich_orders:
         sandwich_orders.remove('pastrami')
 
     while sandwich_orders:
         sandwich = sandwich_orders.pop(0)
-        print(f"I made your {sandwich} sandwich.")
         finished_sandwiches.append(sandwich)
 
-    print("\nSandwiches made:")
-    for sandwich in finished_sandwiches:
-        print(sandwich)
+    return finished_sandwiches
+
+
+sandwich_orders = [
+    'tuna', 'pastrami', 'chicken',
+    'pastrami', 'egg', 'pastrami', 'beef'
+]
+print("\nSorry, the deli has run out of pastrami.")
+finished = make_sandwiches_no_pastrami(sandwich_orders)
+for sandwich in finished:
+    print(f"I made your {sandwich} sandwich.")
 
 
 def dream_vacation_poll():
@@ -119,18 +147,10 @@ def dream_vacation_poll():
         if another.lower() == 'no':
             break
 
-    print("\nPoll results:")
-    for name, place in dream_vacations.items():
-        print(f"{name} would like to visit {place}.")
+    return dream_vacations
 
 
-sandwich_orders_1 = ['tuna', 'chicken', 'pastrami', 'egg', 'beef']
-make_sandwiches(sandwich_orders_1)
-
-sandwich_orders_2 = [
-    'tuna', 'pastrami', 'chicken',
-    'pastrami', 'egg', 'pastrami', 'beef'
-]
-make_sandwiches_no_pastrami(sandwich_orders_2)
-
-dream_vacation_poll()
+poll_results = dream_vacation_poll()
+print("\nPoll results:")
+for name, place in poll_results.items():
+    print(f"{name} would like to visit {place}.")
