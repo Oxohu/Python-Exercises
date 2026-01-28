@@ -76,6 +76,7 @@ while True:
         print("Your ticket costs $15.")
 
 
+
 topping = ""
 while topping != 'quit':
     topping = input("Enter a topping (or 'quit' to stop): ")
