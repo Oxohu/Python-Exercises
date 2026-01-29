@@ -111,7 +111,15 @@ for sandwich in finished:
     print(f"I made your {sandwich} sandwich.")
 
 
-def make_sandwiches_no_pastrami(sandwich_orders):
+def make_sandwiches_no_pastrami(sandwich_orders) -> dict:
+    """
+    Docstring for make_sandwiches_no_pastrami
+    
+    :param sandwich_orders: collects input from the user based on what fillings they would 
+    want for their sandwich
+    :return: Description
+    :rtype: dict
+    """
     finished_sandwiches = []
 
     while 'pastrami' in sandwich_orders:
@@ -134,7 +142,13 @@ for sandwich in finished:
     print(f"I made your {sandwich} sandwich.")
 
 
-def dream_vacation_poll():
+def dream_vacation_poll() -> str:
+    """
+    dream_vacation_poll prompts users for their name and dream vacation location
+
+    :return: name if the person and their dream vacation
+    :rtype: str
+    """
     dream_vacations = {}
 
     while True:
