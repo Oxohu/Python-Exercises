@@ -34,3 +34,20 @@ def degrees_converter() -> float:
     
 print(radians_converter())
 print(degrees_converter())
+
+
+#the next functions calculates the area of a circle
+
+def circle_area() -> float:
+   """
+   this function prompts user for radius of a circle and uses it to  calculate the area of the circle
+   
+   :return: area of the circle
+   :rtype: float
+   """
+   radius = float(input("what is the radius of the circle?: "))
+   if radius:
+      area = float(2 * math.pi * (radius ** 2))
+
+      return area
+print(circle_area())
