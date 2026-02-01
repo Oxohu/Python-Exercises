@@ -47,7 +47,37 @@ def circle_area() -> float:
    """
    radius = float(input("what is the radius of the circle?: "))
    if radius:
-      area = float(2 * math.pi * (radius ** 2))
+      area = float( math.pi * (radius ** 2))
 
       return area
+   
 print(circle_area())
+
+
+#the folloeing function determines what type of file throught the file name
+def identify_file_type() -> str:
+    """
+    Prompts the user to enter a file name and determines the file type
+    based on its extension.
+
+    :return: file type in a sentence
+    :rtpye: str
+    """
+    filename = input("Enter a file name: ")
+
+    if '.' not in filename:
+        return "Unknown file type"
+
+    file_types = {
+        'py': 'Python file',
+        'js': 'JavaScript file',
+        'html': 'HTML file',
+        'css': 'CSS file'
+    }
+
+    extension = filename.split('.')[-1]
+    return file_types.get(extension, "Unsupported file type")
+
+
+print(identify_file_type())
+
