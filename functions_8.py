@@ -172,7 +172,7 @@ print(messages)
 print(sent_messages)
 
 
-def make_sandwich(*items: str) -> str:
+def make_sandwich(items: str) -> str:
     """
     this function summarizes a sandwich order
 
