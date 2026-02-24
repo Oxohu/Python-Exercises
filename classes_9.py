@@ -11,4 +11,4 @@ def sit(self):
     print(f"{self.name} is now sitting.")
 def roll_over(self):
     """Simulate rolling over in response to a command."""
-    print(f"{self.name} rolled over!"
+    print(f"{self.name} rolled over!")
