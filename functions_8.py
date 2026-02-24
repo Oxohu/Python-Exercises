@@ -23,7 +23,7 @@ def favourite_book() -> str:
 print(favourite_book())
 
 
-def make_shirt(size: str, message: str) -> str:
+def make_shirt(size = "L", message = "nafisat") -> str:
     """
     this function returns a summary of a shirt size
     and the message printed on the shirt
@@ -35,8 +35,7 @@ def make_shirt(size: str, message: str) -> str:
     """
     return f"the shirt is size {size} and it has the following written on it : {message}"
 
-size = input("What size do you wear? ")
-message = input("What do you want printed on the shirt? ")
 
-result = make_shirt(size, message)
+result = make_shirt()
 print(result)
+
